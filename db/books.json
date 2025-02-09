@@ -1,0 +1,30 @@
+[
+    {
+      "title": "The rules of money",
+      "author": "Victor K",
+      "year": 2019,
+      "id": 1
+    },
+    { "title": "Finding Love", "author": "Uche Marvel", "year": 2020, "id": 2 },
+    {
+      "title": "Finishing wWell",
+      "author": "Shinji Kagawa",
+      "year": 2015,
+      "id": 3
+    },
+    {
+      "title": "Building Your Empire",
+      "author": "Park Ji Sung",
+      "year": 2004,
+      "id": 4
+    },
+    {
+      "title": "The Lion and the Jewel",
+      "author": "Wole Soyinka",
+      "year": 2004,
+      "id": 5
+    },
+    { "title": "Heaven's Gate", "author": "Paul Mattew", "year": 2015, "id": 6 },
+    { "title": "Stay High", "author": "Lewis Uche", "year": 2013, "id": 8 }
+  ]
+  
