@@ -15,6 +15,8 @@ function getAllUsers(){
         });
     })
 }
+
+
 function authenticateUser(req, res, roles){
     return new Promise((resolve, reject)=>{
 
@@ -47,7 +49,8 @@ function authenticateUser(req, res, roles){
             
             resolve(book)
             console.log(book)
-            console.log({user: loginDetails})
+            console.log(loginDetails)
+            
         })
     });
 };

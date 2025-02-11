@@ -10,29 +10,21 @@ const booksDbPath = path.join(__dirname, 'db', 'books.json');
 // Function to get all books from the JSON file and send them as a response to a GET request to '/books'
 function getAllBooks(req, res){
     // Read the JSON file and send the data as a response
-    fs.readFile(booksDbPath, 'utf-8',  (err, users) =>{
+    fs.readFile(booksDbPath, 'utf-8',  (err, data) =>{
         if(err){
             console.log(err);
             res.writeHead(400);
             res.end('an rror occured');
         };
 
-        res.end(users);
+        res.end(data);
     });
 };
 
 
 // Function to add a new book to the JSON file and send a response to a POST request to '/books'
-function addBook(req, res){
-    const body = [];
-
-    req.on('data', (chunk)=>{
-        body.push(chunk);
-    });
-
-    req.on('end', ()=>{
-        const parseBody = Buffer.concat(body).toString();
-        const newBook = JSON.parse(parseBody);
+function addBook(req, res, newBook){
+    
     
 
         // Add the new book to the data
@@ -67,7 +59,7 @@ function addBook(req, res){
                 res.end(JSON.stringify(newBook));
             });
         });
-    });
+    
         
 }
 
