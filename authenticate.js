@@ -2,8 +2,6 @@ const path = require('path');
 const fs = require('fs');
 
 const userDbPath = path.join(__dirname, 'db', 'users.json');
-const booksDbPath = path.join(__dirname, 'db', 'books.json');
-
 
 function getAllUsers(){
     return new Promise((resolve, reject) =>{
@@ -48,9 +46,6 @@ function authenticateUser(req, res, roles){
             }
             
             resolve(book)
-            console.log(book)
-            console.log(loginDetails)
-            
         })
     });
 };
